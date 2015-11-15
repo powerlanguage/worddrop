@@ -6,33 +6,40 @@ public class LetterSpawnerScript : MonoBehaviour {
 	public GameObject[] alphabet;
 	public float xForceRange = 100;
 	public float maxTorque = 10;
-	GameObject newBox;
+	public float xPos;
+	public float xIncrement = 5;
+	float xStart;
+	GameObject newLetter;
 
 	// Use this for initialization
 	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
+		xStart = -Camera.main.orthographicSize;
+		xPos = xStart;
 	}
 
 	public void SpawnLetter(char optional = 'c'){
 
-		int letterIndex = optional - 97;
-		Debug.Log (letterIndex);
+		//Increment xPos
+		float letterX = xPos;
+		xPos += xIncrement;
+		if (xPos > Camera.main.orthographicSize) {
+			xPos = xStart;
+		}
 
-		float randomX = Random.Range(-5,5);
+		//Set starting values
 		Vector2 randomForce = new Vector2(Random.Range(-xForceRange,xForceRange), 0);
 		Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0,360));
-		int randomIndex = (int)Random.Range(0, alphabet.Length);
+
+		//Instantiate
+		int letterIndex = optional - 97;
 		GameObject letterPrefab = alphabet[letterIndex];
-		newBox = (GameObject)Instantiate(letterPrefab, new Vector3(randomX, transform.position.y, transform.position.z), transform.rotation);
-		Rigidbody2D newBoxRigidbody = newBox.GetComponent<Rigidbody2D>();
+		newLetter = (GameObject)Instantiate(letterPrefab, new Vector3(letterX, transform.position.y, transform.position.z), transform.rotation);
+
+		//Add torque
+		Rigidbody2D newBoxRigidbody = newLetter.GetComponent<Rigidbody2D>();
 		newBoxRigidbody.AddForce(randomForce);
 		newBoxRigidbody.AddTorque(Random.Range(0,maxTorque));
-		Debug.Log(newBox);
+		Debug.Log(newLetter);
 	}
 	
 }
