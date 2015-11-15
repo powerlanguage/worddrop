@@ -27,7 +27,7 @@ public class LetterSpawnerScript : MonoBehaviour {
 		}
 
 		//Set starting values
-		Vector2 randomForce = new Vector2(Random.Range(-xForceRange,xForceRange), 0);
+		Vector2 randomForce = new Vector2(Random.Range(0,xForceRange), 0);
 		Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(0,360));
 
 		//Instantiate

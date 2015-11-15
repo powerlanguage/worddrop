@@ -14,9 +14,16 @@ public class InputCaptureScript : MonoBehaviour {
 	void Update () {
 
 		if (Input.anyKeyDown) {
-			char inputChar = (char)Input.inputString[0];
-			LetterSpawnerScript spawner = LetterSpawner.GetComponent<LetterSpawnerScript>();
-			spawner.SpawnLetter(inputChar);
+
+			if(Input.GetKeyDown("space")) {
+				Debug.Log ("space");
+			} else if(Input.GetKeyDown("return")) {
+				Debug.Log("return");
+			} else {
+				char inputChar = (char)Input.inputString[0];
+				LetterSpawnerScript spawner = LetterSpawner.GetComponent<LetterSpawnerScript>();
+				spawner.SpawnLetter(inputChar);
+			}
 		}
 	
 	}
