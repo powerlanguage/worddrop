@@ -12,6 +12,7 @@ GameObject:
   - 50: {fileID: 5040464}
   - 61: {fileID: 6189666}
   - 61: {fileID: 6109114}
+  - 114: {fileID: 11481556}
   m_Layer: 0
   m_Name: L
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.17999983, y: 9.93000031, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,6 +74,17 @@ BoxCollider2D:
   m_Offset: {x: -.87399435, y: .00277423859}
   serializedVersion: 2
   m_Size: {x: .768713951, y: 3.49115443}
+--- !u!114 &11481556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 168314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060e94f4a35104086a8313cfebebba5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21296854
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -105,7 +117,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 168314}

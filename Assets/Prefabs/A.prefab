@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21218742}
   - 60: {fileID: 6025372}
   - 50: {fileID: 5013926}
+  - 114: {fileID: 11414754}
   m_Layer: 0
   m_Name: A
   m_TagString: Untagged
@@ -70,6 +71,17 @@ PolygonCollider2D:
     - - {x: .498858929, y: .397518158}
       - {x: -.0222167969, y: .73608458}
       - {x: -.10265255, y: -.286427498}
+--- !u!114 &11414754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 147098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060e94f4a35104086a8313cfebebba5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21218742
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -109,6 +121,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_CollisionDetection
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

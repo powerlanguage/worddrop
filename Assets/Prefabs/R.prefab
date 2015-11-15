@@ -13,6 +13,7 @@ GameObject:
   - 60: {fileID: 6047646}
   - 58: {fileID: 5870156}
   - 61: {fileID: 6152704}
+  - 114: {fileID: 11441960}
   m_Layer: 0
   m_Name: R
   m_TagString: Untagged
@@ -99,6 +100,17 @@ BoxCollider2D:
   m_Offset: {x: -1.13294506, y: .00750291348}
   serializedVersion: 2
   m_Size: {x: .794113398, y: 3.5049901}
+--- !u!114 &11441960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060e94f4a35104086a8313cfebebba5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21225800
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -131,7 +143,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 184802}
